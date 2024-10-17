@@ -1,8 +1,12 @@
 import css from './WelcomePage.module.css';
 import { NavLink } from 'react-router-dom';
 import logo from '/src/assets/icon-logo.svg';
+import { useDispatch } from 'react-redux';
+import { logIn } from '../../redux/auth/operations';
 
 const WelcomePage = () => {
+	const dispatch = useDispatch();
+
 	return (
 		<div className={css.bodyArea}>
 			<div className={css.homeArea}>
@@ -29,6 +33,17 @@ const WelcomePage = () => {
 				<NavLink className={css.link} to="/auth/login">
 					Log in
 				</NavLink>
+				<button
+					type="button"
+					className={css.btn}
+					onClick={() =>
+						dispatch(
+							logIn({ email: 'columnscards@test.com', password: '12345678' })
+						)
+					}
+				>
+					Demo
+				</button>
 			</div>
 		</div>
 	);

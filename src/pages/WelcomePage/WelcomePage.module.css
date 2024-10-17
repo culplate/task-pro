@@ -92,6 +92,7 @@
 	cursor: pointer;
 	background-color: #161616;
 	width: 100%;
+	max-width: 335px;
 	height: 49px;
 	padding: 0.875em 0em;
 	color: white;
@@ -101,6 +102,10 @@
 	font-weight: 500;
 	line-height: normal;
 	letter-spacing: -0.0175em;
+
+	@media screen and (min-width: 768px) {
+		max-width: 344px;
+	}
 }
 
 .btn:hover {
@@ -122,6 +127,7 @@
 	font-weight: 500;
 	line-height: normal;
 	letter-spacing: -0.0175rem;
+	margin-bottom: 15px;
 }
 
 .link:hover {
